@@ -9,7 +9,7 @@ from MDB.components.Text import Paragraph
 # This file will generate the Readme.md
 
 document = MDBuilder()
-document.AddComponent(Heading1("Markdown Builder ( mdb.py )"))
+document.AddComponent(Heading1("Markdown Document Builder ( mdb.py )"))
 document.AddComponent(Paragraph("A python library for building markdown documents, is it a good idea to do it like this, probably not. but this was created because I wanted to play around with python OOP and inheritance."))
 document.AddComponent(Paragraph("The aim is to provide a simple library which can be used to build up  a markdown document in code, without having to write giant strings yourself."))
 document.AddComponent(Paragraph("see `example.py` for an example of using the library to build this document."))
@@ -44,10 +44,4 @@ nonStandardTodoList.AddItem("Checkbox lists", True)
 nonStandardTodoList.AddItem("Tables", False)
 document.AddComponent(nonStandardTodoList)
 
-output = document.Build()
-
-output_file = "README-gen.md"
-with open(output_file, 'w') as f:
-    f.write(output)
-
-print(f"file written to {output_file}")
+output = document.Write("Readme-gen.md")

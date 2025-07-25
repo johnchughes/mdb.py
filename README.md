@@ -1,4 +1,4 @@
-# Markdown Builder ( mdb.py )
+# Markdown Document Builder ( mdb.py )
 
 A python library for building markdown documents, is it a good idea to do it like this, probably not. but this was created because I wanted to play around with python OOP and inheritance.
 
